@@ -17,9 +17,7 @@ public class BlogWriterService {
 
     public void saveBlog(BlogContent blogContent) {
         Blog blog = new Blog();
-        blog.setTitle(blogContent.getTitle());
         blog.setContent(blogContent.getContent());
-        blog.setSourceUrls(blogContent.getSourceUrls());
         blog.setCategory(blogContent.getCategory());
         blog.setPublishDate(LocalDate.now());
         blogRepository.save(blog);

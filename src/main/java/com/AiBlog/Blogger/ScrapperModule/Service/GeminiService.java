@@ -14,7 +14,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 @Service
 public class GeminiService {
@@ -69,7 +68,7 @@ public class GeminiService {
         HttpEntity<Map<String, Object>> request = new HttpEntity<>(requestBody, headers);
 
         // Use the correct API endpoint with API key as parameter
-        String apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + apiKey;
+        String apiUrl = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" + apiKey;
 
         try {
             ResponseEntity<Map<String, Object>> response = restTemplate.exchange(
@@ -83,9 +82,7 @@ public class GeminiService {
             String blogMarkdown = extractBlogText(responseBody);
 
             return new BlogContent(
-                    "Top News Summary for " + category.name(),
                     blogMarkdown, // Now contains Markdown instead of HTML
-                    articles.stream().map(ArticleMetaData::getUrl).collect(Collectors.toList()),
                     category
             );
 
@@ -93,9 +90,7 @@ public class GeminiService {
             logger.error("Gemini API call failed for category {}: {}", category.name(), e.getMessage(), e);
 
             return new BlogContent(
-                    "[FAILED] Top News Summary for " + category.name(),
                     "<p>Failed to generate blog content. Error: " + e.getMessage() + "</p>",
-                    articles.stream().map(ArticleMetaData::getUrl).collect(Collectors.toList()),
                     category
             );
         }

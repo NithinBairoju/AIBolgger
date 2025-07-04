@@ -1,6 +1,7 @@
 package com.AiBlog.Blogger.ScrapperModule.configuration;
 
 import com.AiBlog.Blogger.ScrapperModule.Service.RssFetcherService;
+import jakarta.annotation.PostConstruct;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -17,7 +18,8 @@ public class ScraperSchedulerConfig {
     }
 
 
-    @Scheduled(cron = "0 0 6 * * *", zone = "Asia/Kolkata")
+//    @Scheduled(cron = "0 0 6 * * *", zone = "Asia/Kolkata")
+    @PostConstruct
     public void scheduleRssFetch() {
         System.out.println("Starting RSS fetch at: " + LocalDateTime.now());
         rssFetcherService.fetchFeedsAndQueueTasks();

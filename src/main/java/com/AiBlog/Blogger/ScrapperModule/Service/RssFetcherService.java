@@ -59,7 +59,7 @@ public class RssFetcherService {
 
                 if (!articles.isEmpty()) {
                     BlogGenerationTask task = new BlogGenerationTask(category, articles);
-                    taskQueue.addTask(task);
+                    taskQueue.publish(task);
                 }
             } catch (Exception e) {
                 System.err.println("Failed to fetch RSS feed for category " + category + ": " + e.getMessage());
