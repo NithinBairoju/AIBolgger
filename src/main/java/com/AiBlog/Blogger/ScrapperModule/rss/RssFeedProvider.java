@@ -1,6 +1,6 @@
 package com.AiBlog.Blogger.ScrapperModule.rss;
 
-import com.AiBlog.Blogger.ScrapperModule.Enums.Category;
+import com.AiBlog.Blogger.shared.Enums.Category;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -14,7 +14,8 @@ public class RssFeedProvider {
                 Category.ECONOMY, "https://feeds.feedburner.com/ndtvprofit-latest",
                 Category.SCIENCE, "https://feeds.feedburner.com/gadgets360-latest",
                 Category.HEALTH, "https://feeds.feedburner.com/ndtvcooks-latest",
-                Category.SOCIETY, "https://feeds.feedburner.com/ndtvnews-people"
+                Category.SOCIETY, "https://feeds.feedburner.com/ndtvnews-people",
+                Category.TOP, "https://feeds.feedburner.com/ndtvnews-trending-news"
         );
     }
 }

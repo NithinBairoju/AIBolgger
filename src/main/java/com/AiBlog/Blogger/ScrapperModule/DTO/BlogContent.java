@@ -1,7 +1,5 @@
 package com.AiBlog.Blogger.ScrapperModule.DTO;
-import com.AiBlog.Blogger.ScrapperModule.Enums.Category;
-
-import java.util.List;
+import com.AiBlog.Blogger.shared.Enums.Category;
 
 public class BlogContent {
     private final String content;

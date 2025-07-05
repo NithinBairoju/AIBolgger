@@ -1,4 +1,4 @@
-package com.AiBlog.Blogger.ScrapperModule.Enums;
+package com.AiBlog.Blogger.shared.Enums;
 
 public enum Category {
     POLITY,
@@ -6,5 +6,6 @@ public enum Category {
     ECONOMY,
     SCIENCE,
     HEALTH,
-    SOCIETY
+    SOCIETY,
+    TOP
 }

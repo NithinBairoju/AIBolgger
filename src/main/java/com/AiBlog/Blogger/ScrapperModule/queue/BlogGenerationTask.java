@@ -1,7 +1,6 @@
 package com.AiBlog.Blogger.ScrapperModule.queue;
 
-import com.AiBlog.Blogger.ScrapperModule.Enums.Category;
-import org.springframework.stereotype.Component;
+import com.AiBlog.Blogger.shared.Enums.Category;
 
 import java.util.List;
 

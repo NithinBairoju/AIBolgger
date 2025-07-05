@@ -1,11 +1,12 @@
 package com.AiBlog.Blogger.ScrapperModule.Service;
 
 import com.AiBlog.Blogger.ScrapperModule.DTO.BlogContent;
-import com.AiBlog.Blogger.ScrapperModule.Repository.BlogRepository;
-import com.AiBlog.Blogger.ScrapperModule.model.Blog;
+import com.AiBlog.Blogger.shared.Repository.BlogRepository;
+import com.AiBlog.Blogger.shared.model.Blog;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
+
+import java.time.LocalDateTime;
 
 @Service
 public class BlogWriterService {
@@ -19,7 +20,7 @@ public class BlogWriterService {
         Blog blog = new Blog();
         blog.setContent(blogContent.getContent());
         blog.setCategory(blogContent.getCategory());
-        blog.setPublishDate(LocalDate.now());
+        blog.setPublishDate(LocalDateTime.now());
         blogRepository.save(blog);
     }
 }

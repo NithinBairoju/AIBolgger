@@ -18,8 +18,8 @@ public class ScraperSchedulerConfig {
     }
 
 
-//    @Scheduled(cron = "0 0 6 * * *", zone = "Asia/Kolkata")
-    @PostConstruct
+//    @PostConstruct
+    @Scheduled(cron = "0 0 6 * * *", zone = "Asia/Kolkata")
     public void scheduleRssFetch() {
         System.out.println("Starting RSS fetch at: " + LocalDateTime.now());
         rssFetcherService.fetchFeedsAndQueueTasks();

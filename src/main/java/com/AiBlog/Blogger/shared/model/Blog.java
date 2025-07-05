@@ -1,10 +1,9 @@
-package com.AiBlog.Blogger.ScrapperModule.model;
+package com.AiBlog.Blogger.shared.model;
 
-import com.AiBlog.Blogger.ScrapperModule.Enums.Category;
+import com.AiBlog.Blogger.shared.Enums.Category;
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
-import java.util.List;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "blogs")
@@ -20,7 +19,7 @@ public class Blog {
     @Lob
     private String content;
 
-    private LocalDate publishDate;
+    private LocalDateTime publishDate;
 
 
     // Getters and Setters
@@ -34,8 +33,8 @@ public class Blog {
     public String getContent() { return content; }
     public void setContent(String content) { this.content = content; }
 
-    public LocalDate getPublishDate() { return publishDate; }
-    public void setPublishDate(LocalDate publishDate) { this.publishDate = publishDate; }
+    public LocalDateTime  getPublishDate() { return publishDate; }
+    public void setPublishDate(LocalDateTime  publishDate) { this.publishDate = publishDate; }
 
 }
 

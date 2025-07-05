@@ -1,6 +1,6 @@
 package com.AiBlog.Blogger.ScrapperModule.Service;
 
-import com.AiBlog.Blogger.ScrapperModule.Enums.Category;
+import com.AiBlog.Blogger.shared.Enums.Category;
 import com.AiBlog.Blogger.ScrapperModule.queue.ArticleMetaData;
 import com.AiBlog.Blogger.ScrapperModule.queue.BlogGenerationTask;
 import com.AiBlog.Blogger.ScrapperModule.queue.BlogTaskQueue;
