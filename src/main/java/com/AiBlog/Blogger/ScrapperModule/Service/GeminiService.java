@@ -40,8 +40,8 @@ public class GeminiService {
         StringBuilder prompt = new StringBuilder();
         prompt.append("You are writing a UPSC blog for category: ").append(category.name()).append(".\n");
         prompt.append("Here are some article headlines and links. Based on these headlines, select the top 3–5 most important for UPSC preparation. ");
-        prompt.append("Then write a comprehensive summary of each selected article with proper analysis for UPSC aspirants. ");
-        prompt.append("Include the source links at the end.\n\n");
+        prompt.append("Then write a comprehensive summary of each selected article with proper analysis for UPSC aspirants. write title according to thenews in the blog. ");
+        prompt.append("Include the source links at the end of each news .\n\n");
         prompt.append("**IMPORTANT**: Format your response in proper Markdown format with:\n");
         prompt.append("- Use ## for main headings\n");
         prompt.append("- Use ### for subheadings\n");
